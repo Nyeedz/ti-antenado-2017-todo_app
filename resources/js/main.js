@@ -10,8 +10,8 @@ var completeSVG = '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:x
 
 renderTodoList();
 
-// User clicked on the add button
-// If there is any text inside the item field, add that text to the todo list
+// Cliocando no adicionar button
+// Se tiver algum texto dentro do field, adiciona tarefa
 document.getElementById('add').addEventListener('click', function() {
   var value = document.getElementById('item').value;
   if (value) {
@@ -83,7 +83,7 @@ function completeItem() {
   }
   dataObjectUpdated();
 
-  // Check if the item should be added to the completed list or to re-added to the todo list
+  // Verifica se o item deve ser adicionado a lista ou readicionado
   var target = (id === 'todo') ? document.getElementById('completed'):document.getElementById('todo');
 
   parent.removeChild(item);
